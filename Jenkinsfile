@@ -9,6 +9,7 @@ pipeline {
               uname
               docker ps
               echo "adios"
+              mvn clean install
               '''
           }
       }
