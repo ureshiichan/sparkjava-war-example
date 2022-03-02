@@ -3,7 +3,13 @@ pipeline {
   stages {
       stage('Build'){
           steps {
-              echo "Do something"
+              sh '''
+              echo "Hola"
+              pwd
+              uname
+              docker ps
+              echo "adios"
+              '''
           }
       }
       stage('Test'){
