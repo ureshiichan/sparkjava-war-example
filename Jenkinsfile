@@ -20,7 +20,9 @@ pipeline {
       }
       stage('Deploy'){
           steps{
-              echo "Do something"
+             sh '''
+              docker cp /home/devops/workspace/samanthaFolder/SamanthaPipeline/target/sparkjava-hello-world-1.0.war tomcat://usr/local/tomcat/webapps
+             '''
           }
       }
   }
